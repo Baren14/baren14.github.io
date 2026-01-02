@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="floating_window" id="floating_window_about">
+    <div class="floating_window" id="floating_window">
         <div class="window_header" id="window_header">
-            <div class="window_title" id="window_title">About</div>
-            <div class="window_options"><button class="close_window" onclick="close_window('about')">&times;</button></div>
+            <div class="window_title" id="window_title">about</div>
+            <div class="window_options"><button class="close_window" onclick="close_window(document.getElementById('window_title').innerHTML)">&times;</button></div>
         </div>
         <div class="window_content">
-            <h1>About Me</h1>
+            <!--<h1>About Me</h1>-->
+            <iframe id="iframe1" src="about.html" style="width: 100%; height: 100%; border: none;"></iframe>
         </div>
     </div>
     <div class="desktop">

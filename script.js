@@ -1,17 +1,19 @@
 function close_window(title){
-    var window_id = "floating_window_" + title
-    var window1 = document.getElementById(window_id);
+    //var window_id = "floating_window_" + title
+    var window1 = document.getElementById("floating_window");
     window1.style.display = "none"
 }
 
 function open_window(title){
-    var window_id = "floating_window_" + title
-    var window1 = document.getElementById(window_id);
-    window1.style.display = "flex"
-    title.innerHTML = title
+    var window1 = document.getElementById("floating_window");
+    var content = document.getElementById("iframe1");
+    var window_title = document.getElementById("window_title");
+    content.src = title + ".html";
+    window1.style.display = "flex";
+    window_title.innerHTML = title;
 }
 
-drag_window(document.getElementById("floating_window_about"))
+drag_window(document.getElementById("floating_window"))
 function drag_window(window1){
     var x1 = 0, y1 = 0, x2 = 0, y2 = 0;
     var header = document.getElementById("window_header");
@@ -37,6 +39,7 @@ function drag_window(window1){
         y1 = e.clientY;
         window1.style.top = (window1.offsetTop - y2) + "px";
         window1.style.left = (window1.offsetLeft - x2) + "px";
+
     }
     function drag_mouse_up(){
         document.onmouseup = null;
