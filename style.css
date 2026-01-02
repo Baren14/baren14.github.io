@@ -7,10 +7,9 @@ body{
 }
 
 .floating_window{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 100px;
+    left: 500px;
     z-index: 1;
     width: 800px;
     height: 600px;
@@ -44,7 +43,7 @@ body{
     align-items: center;   
     width: 96%;
     height: 30px;
-    cursor: pointer;
+    cursor: grab;
 }
 
 .window_title{
