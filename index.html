@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="floating_window" id="floating_window_about">
+        <div class="window_header">
+            <div class="window_title" id="window_title">About</div>
+            <div class="window_options"><button class="close_window" onclick="close_window('about')">&times;</button></div>
+        </div>
+        <div class="window_content">
+            <h1>About Me</h1>
+        </div>
+    </div>
+    <div class="desktop">
+        <div class="icon"><img src="img/about.png" onclick="open_window('about')"><label>about</label></div>
+    </div>
 </body>
+<script src="script.js"></script>
 </html>
